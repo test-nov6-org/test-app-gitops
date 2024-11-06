@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: test-nov6-newapp
+  janus-idp.io/tekton: test-nov6-newapp
+  backstage.io/kubernetes-id: test-nov6-newapp
+  backstage.io/kubernetes-namespace: rhdh-app 
+  app.kubernetes.io/part-of: test-nov6-newapp
+resources: 
+- initialize-namespace.yaml
+- deployment-model-server.yaml
+- service-model-server.yaml
+- deployment.yaml
+- route.yaml
+- service.yaml
+- model-config.yaml

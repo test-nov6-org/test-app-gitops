@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-nov6-newapp-database-config
+data:
+  VECTORDB_HOST: "test-nov6-newapp-database"
+  VECTORDB_PORT: ""

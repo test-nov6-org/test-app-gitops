@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: test-nov6-newapp-gitops
+  description: This is GitOps manifest for test-nov6-newapp   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: test-nov6-newapp
+    janus-idp.io/tekton: test-nov6-newapp 
+    backstage.io/kubernetes-id: test-nov6-newapp 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:test-nov6-newapp

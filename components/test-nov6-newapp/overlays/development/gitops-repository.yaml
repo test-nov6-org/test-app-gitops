@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: test-nov6-newapp-gitops-repository
+spec:
+  url: https://github.com/test-nov6-org/test-app-gitops

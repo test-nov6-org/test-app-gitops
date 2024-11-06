@@ -1,0 +1,6 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-nov6-newapp-model-config
+data:
+  MODEL_ENDPOINT: "http://test-nov6-newapp-model-server:8001"
